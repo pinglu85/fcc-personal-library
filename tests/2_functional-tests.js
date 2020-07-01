@@ -21,33 +21,6 @@ suiteSetup((done) => {
 });
 
 suite('Functional Tests', function () {
-  /*
-   * ----[EXAMPLE TEST]----
-   * Each test should completely test the response of the API end-point including response status code!
-   */
-  // test('#example Test GET /api/books', function (done) {
-  //   chai
-  //     .request(server)
-  //     .get(url)
-  //     .end((err, res) => {
-  //       assert.equal(res.status, 200);
-  //       assert.isArray(res.body, 'response should be an array');
-  //       res.body.forEach((book) => {
-  //         assert.property(
-  //           book,
-  //           'commentcount',
-  //           'Books in array should contain commentcount'
-  //         );
-  //         assert.property(book, 'title', 'Books in array should contain title');
-  //         assert.property(book, '_id', 'Books in array should contain _id');
-  //       });
-  //       done();
-  //     });
-  // });
-  /*
-   * ----[END of EXAMPLE TEST]----
-   */
-
   suite('Routing tests', function () {
     suite(
       'POST /api/books with title => create book object/expect book object',
@@ -56,14 +29,14 @@ suite('Functional Tests', function () {
           chai
             .request(server)
             .post(url)
-            .send({ title: 'Mocha and Chai test 2' })
+            .send({ title: 'Mocha and Chai test 3' })
             .end((err, res) => {
               assert.equal(res.status, 200);
               assert.isObject(res.body);
               assert.property(res.body, 'title');
               assert.property(res.body, '_id');
               assert.property(res.body, 'comments');
-              assert.equal(res.body.title, 'Mocha and Chai test 2');
+              assert.equal(res.body.title, 'Mocha and Chai test 3');
               assert.isArray(res.body.comments);
               done();
             });
