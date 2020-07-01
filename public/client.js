@@ -47,6 +47,8 @@ function showBookDetail(title, id) {
   while (detailComments.firstChild) {
     detailComments.removeChild(detailComments.firstChild);
   }
+  // Set list style back to decimal
+  detailComments.style.listStyle = 'decimal';
 
   // Show new comment form
   newCommentForm.style.display = 'block';
