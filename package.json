@@ -1,7 +1,7 @@
 {
-  "name": "fcc-library",
+  "name": "fcc-personal-library",
   "version": "0.0.1",
-  "description": "boilerplate",
+  "description": "FCC: Project Personal Library",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
