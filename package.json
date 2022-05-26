@@ -21,9 +21,6 @@
     "nocache": "^3.0.0",
     "zombie": "^6.1.4"
   },
-  "engines": {
-    "node": "4.4.3"
-  },
   "repository": {
     "type": "git",
     "url": ""
